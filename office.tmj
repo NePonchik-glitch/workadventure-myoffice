@@ -2547,7 +2547,7 @@
                  "name":"InvisibleWalls",
                  "opacity":1,
                  "type":"tilelayer",
-                 "visible":false,
+                 "visible":true,
                  "width":150,
                  "x":0,
                  "y":0
