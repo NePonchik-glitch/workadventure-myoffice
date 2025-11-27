@@ -29,8 +29,8 @@ WA.onInit()
         });
 
         // ---------- КРЫША ДОМА ----------
-        const ROOF_LAYER = "InvisibleWalls";   // имя слоя с крышей
-        const INSIDE_AREA = "ZoneHouse1";      // имя ОБЪЕКТА-зоны
+        const ROOF_LAYER = "InvisibleWalls"; // имя tile-слоя с крышей
+        const INSIDE_AREA = "ZoneHouse1";    // имя area-объекта
 
         // Заходим в зону — прячем крышу
         WA.room.area.onEnter(INSIDE_AREA).subscribe(() => {
@@ -43,8 +43,8 @@ WA.onInit()
         });
 
         // ---------- Extra API ----------
-        bootstrapExtra().catch((e) => console.error(e));
+        bootstrapExtra().catch(() => {});
     })
-    .catch((e) => console.error(e));
+    .catch(() => {});
 
 export {};
