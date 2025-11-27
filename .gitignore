@@ -1,0 +1,12 @@
+﻿# ОС и IDE
+Thumbs.db
+.DS_Store
+
+# Tiled временные
+*.tmx~
+*.backup
+*.bak
+
+# Громоздкие промежуточные
+*.psd
+*.xcf
