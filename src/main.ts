@@ -34,3 +34,26 @@ function closePopup(){
 }
 
 export {};
+
+/// <reference types="@workadventure/iframe-api-typings" />
+
+console.log('✅ Roof script started');
+
+WA.onInit().then(() => {
+    console.log('✅ WA API ready');
+
+    const ROOF_LAYER = 'InvisibleWalls'; // слой с крышей
+    const INSIDE_LAYER = 'ZoneHouse1';   // слой-зона внутри здания
+
+    // Когда заходим в здание — прячем крышу
+    WA.room.onEnterLayer(INSIDE_LAYER).subscribe(() => {
+        console.log('🏠 Enter ZoneHouse1 — hide roof');
+        WA.room.hideLayer(ROOF_LAYER);
+    });
+
+    // Когда выходим — возвращаем крышу
+    WA.room.onLeaveLayer(INSIDE_LAYER).subscribe(() => {
+        console.log('🚪 Leave ZoneHouse1 — show roof');
+        WA.room.showLayer(ROOF_LAYER);
+    });
+}).catch(e => console.error('WA init error', e));
