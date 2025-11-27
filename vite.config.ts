@@ -44,3 +44,21 @@ export default defineConfig({
         open: "/",
     },
 });
+
+import './style.css';
+import * as WA from '@workadventure/iframe-api-typings';
+
+WA.onInit().then(() => {
+    const ROOF_LAYER = 'InvisibleWalls';        // имя слоя с крышей
+    const INSIDE_LAYER = 'ZoneHouse1';    // слой-зона внутри здания
+
+    // Когда заходим в здание — прячем крышу
+    WA.room.onEnterLayer(INSIDE_LAYER).subscribe(() => {
+        WA.room.hideLayer(ROOF_LAYER);
+    });
+
+    // Когда выходим — возвращаем крышу
+    WA.room.onLeaveLayer(INSIDE_LAYER).subscribe(() => {
+        WA.room.showLayer(ROOF_LAYER);
+    });
+}).catch(e => console.error(e));
