@@ -1576,6 +1576,17 @@
         }, 
         {
          "draworder":"topdown",
+         "id":86,
+         "name":"floorLayer",
+         "objects":[],
+         "opacity":1,
+         "type":"objectgroup",
+         "visible":true,
+         "x":0,
+         "y":0
+        }, 
+        {
+         "draworder":"topdown",
          "id":90,
          "name":"ZoneHouse",
          "objects":[
@@ -1590,17 +1601,6 @@
                  "x":2984,
                  "y":288
                 }],
-         "opacity":1,
-         "type":"objectgroup",
-         "visible":true,
-         "x":0,
-         "y":0
-        }, 
-        {
-         "draworder":"topdown",
-         "id":86,
-         "name":"floorLayer",
-         "objects":[],
          "opacity":1,
          "type":"objectgroup",
          "visible":true,
