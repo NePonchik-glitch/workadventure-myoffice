@@ -1576,6 +1576,28 @@
         }, 
         {
          "draworder":"topdown",
+         "id":90,
+         "name":"ZoneHouse",
+         "objects":[
+                {
+                 "height":874,
+                 "id":31,
+                 "name":"ZoneHouse1",
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":1612,
+                 "x":2984,
+                 "y":288
+                }],
+         "opacity":1,
+         "type":"objectgroup",
+         "visible":true,
+         "x":0,
+         "y":0
+        }, 
+        {
+         "draworder":"topdown",
          "id":86,
          "name":"floorLayer",
          "objects":[],
@@ -3154,28 +3176,6 @@
          "type":"tilelayer",
          "visible":true,
          "width":150,
-         "x":0,
-         "y":0
-        }, 
-        {
-         "draworder":"topdown",
-         "id":90,
-         "name":"ZoneHouse",
-         "objects":[
-                {
-                 "height":874,
-                 "id":31,
-                 "name":"ZoneHouse1",
-                 "rotation":0,
-                 "type":"area",
-                 "visible":true,
-                 "width":1612,
-                 "x":2984,
-                 "y":288
-                }],
-         "opacity":1,
-         "type":"objectgroup",
-         "visible":true,
          "x":0,
          "y":0
         }],
